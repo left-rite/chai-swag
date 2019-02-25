@@ -8,10 +8,11 @@ export default function chaiSwag(chai: any, utils: any) {
     url: 'req.url',
     method: 'req.method',
     status: 'status',
+    contentType: 'headers.content-type',
     responseBody: 'text',
   }
     
-  chai.swag = new Swag(paths);
+  chai.swag = new Swag(paths, {}, { allErrors: true });
 
   function swaggerAssertion(definition: string | any, options: Partial<SwagOptions>) {
     
