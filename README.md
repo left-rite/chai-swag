@@ -19,11 +19,14 @@ npm install chai-swag
 ---
 
 # Summary
-* [Usage](#usage)
-* [Assertions](#assertions)
-* [Parameters](#parameters)
-* [Options](#options)
-* [Ajv](#ajv)
+- [Chai Swag](#chai-swag)
+  - [Installation](#installation)
+- [Summary](#summary)
+  - [Usage](#usage)
+  - [Assertions](#assertions)
+  - [Parameters](#parameters)
+    - [Options](#options)
+  - [Ajv](#ajv)
 
 ---
 
@@ -86,8 +89,8 @@ The values of these flags are true by default:
 ```javascript
 {
   banUnknownProperties: true,
-  allowNullableProperties: true,
-  allowNullableObjects: true,
+  implicitNullableProperties: true,
+  implicitNullableObjects: true,
   ignoreUnknownServer: true
 }
 ```
@@ -95,16 +98,16 @@ The values of these flags are true by default:
 ### Options
 * ```banUnknownProperties``` - when the swagger definition does not explicitly block additional/unknown properties, this flag allows these properties that are not specified in the definition to be caught
 
-* ```allowNullableProperties``` - when the swagger definition has not explicity declared that properties can be nullable, this allows properties to come back null
+* ```implicitNullableProperties``` - when the swagger definition has not explicity declared that properties can be nullable, this allows properties to come back null
 
-* ```allowNullableObjects``` - when the swagger definition has not explicity declared that objects can be nullable, this allows objects to come back null
+* ```implicitNullableObjects``` - when the swagger definition has not explicity declared that objects can be nullable, this allows objects to come back null
 
 * ```ignoreUnknownServer``` - sometimes the swagger definition may not describe all the servers on which the development/testing are done on, with this flag set, the validator with continue even if the request was made on a server that does not match the ones defined in the definition
 
 Options can be set per validation (see the #Usage), and also can also be set at a higher level so that every validation will inherit the user's choice of defaults, like the following: 
 ```javascript
 chai.swag.options.banUnknownProperties = false;
-chai.swag.options.allowNullableObjects = false;
+chai.swag.options.implicitNullableObjects = false;
 ```
 
 ---
