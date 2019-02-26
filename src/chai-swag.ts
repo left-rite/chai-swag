@@ -8,7 +8,7 @@ export default function chaiSwag(chai: any, utils: any) {
     url: 'req.url',
     method: 'req.method',
     status: 'status',
-    contentType: 'headers.content-type',
+    contentType: 'header.content-type',
     responseBody: 'text',
   }
     
