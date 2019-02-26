@@ -5,8 +5,8 @@ import { Swag, SwagOptions } from 'res-swag';
 export default function chaiSwag(chai: any, utils: any) {
 
   const paths = {
-    url: 'req.url',
-    method: 'req.method',
+    url: 'request.url',
+    method: 'request.method',
     status: 'status',
     contentType: 'header.content-type',
     responseBody: 'text',

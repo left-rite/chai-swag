@@ -4,7 +4,7 @@
     "attributeOne": "yeah, this is good",
     "attributeTwo": "this should be an object"
   },
-  "req": {
+  "request": {
     "url": "http://www.nonsense.not.real/v1/resources/88",
     "method": "get"
   }

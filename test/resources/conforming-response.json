@@ -7,7 +7,7 @@
       "subAttributeTwo": null
     }
   },
-  "req": {
+  "request": {
     "url": "http://www.nonsense.not.real/v1/resources/88",
     "method": "get"
   }
