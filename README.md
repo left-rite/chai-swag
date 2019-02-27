@@ -102,7 +102,7 @@ The values of these flags are true by default:
 
 * ```implicitNullableObjects``` - when the swagger definition has not explicity declared that objects can be nullable, this allows objects to come back null
 
-* ```ignoreUnknownServer``` - sometimes the swagger definition may not describe all the servers on which the development/testing are done on, with this flag set, the validator with continue even if the request was made on a server that does not match the ones defined in the definition
+* ```ignoreUnknownServer``` - sometimes the swagger definition may not describe all the servers on which the development/testing are done on, with this flag set, the validator with continue even if the request was made on a server that does not match the ones defined in the definition. When this happens the validator will try to guess the basePath of unknown the server based on the swagger definition and use that to identify the correct path
 
 Options can be set per validation (see the #Usage), and also can also be set at a higher level so that every validation will inherit the user's choice of defaults, like the following: 
 ```javascript
