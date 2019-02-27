@@ -1,0 +1,14 @@
+{
+  "status": 200,
+  "text": {
+    "attributeOne": "yeah, this is good",
+    "attributeTwo": {
+      "subAttributeOne": 712,
+      "subAttributeTwo": null
+    }
+  },
+  "req": {
+    "url": "http://www.nonsense.not.real/v1/resources/88",
+    "method": "get"
+  }
+}

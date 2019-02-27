@@ -1,6 +1,6 @@
 {
   "name": "chai-swag",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "validate chai-http response against a parsed swagger",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
