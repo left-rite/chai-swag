@@ -64,11 +64,6 @@ describe('chai-swag test', () => {
 
   });
 
-});
-
-
-describe('chai-swag test', () => {
-
   describe('conforming response (with response.req) will work for a good assertion', () => {
 
     it('expect passes', () => {
