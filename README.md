@@ -40,18 +40,21 @@ import chaiSwag from 'chai-swag';
 chai.use(chaiHttp);
 chai.use(chaiSwag);
 
-const definition = require('swagger.yaml');
+const definition = fs.readFileSync('swagger.yaml', 'uft8');
 
 it(`check that an API's response matches the documented response`, async () => {
-  await chai.request('http://localhost:8080')
-    .get('/')
-    .then(r => chai.assert.swagger(r, definition, options));
+  const response: ChaiHttp.Response = await chai.request('http://localhost:8080').get('/');
+  
+  chai.expect(response).to.conform.to.swagger(definition, { ignoreUnknownServer: true });
 });
 
-it('check another Response', async () => {
-  const response = await chai.request('http://localhost:8080').get('/');
-  
-  chai.expect(response).to.conform.to.swagger(definition, { ignoreUnknownServer: false });
+it('check another Response', (done) => {
+  chai.request('http://localhost:8080')
+    .get('/')
+    .then(response => {
+      chai.assert.swagger(r, definition, options);
+      done();
+    });
 });
 ```
 
