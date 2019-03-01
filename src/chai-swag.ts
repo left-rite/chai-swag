@@ -1,11 +1,11 @@
 import * as jc from 'json-cycle';
 import * as jsYaml from 'js-yaml';
 import { Swag, SwagOptions } from 'res-swag';
-import { reqPaths, requestPaths } from './chai-swag.config';
+import { reqPointers, requestPointers } from './chai-swag.config';
 
 export default function chaiSwag(chai: any, utils: any) {
   
-  chai.swag = new Swag(reqPaths, {}, { allErrors: true });
+  chai.swag = new Swag(reqPointers, {}, { allErrors: true });
 
   function swaggerAssertion(definition: string | any, options: Partial<SwagOptions>) {
     
@@ -15,7 +15,7 @@ export default function chaiSwag(chai: any, utils: any) {
 
     const response = jc.decycle(this._obj);
 
-    chai.swag.paths = response.req ? reqPaths : requestPaths;
+    chai.swag.paths = response.req ? reqPointers : requestPointers;
   
     const result = chai.swag.validate(swagger, response, options);
   
