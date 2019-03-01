@@ -1,5 +1,8 @@
 {
   "status": 200,
+  "header": {
+    "content-type": "application/json"
+  },
   "text": {
     "attributeOne": "yeah, this is good",
     "attributeTwo": {
@@ -9,6 +12,6 @@
   },
   "request": {
     "url": "http://www.nonsense.not.real/v1/resources/88",
-    "method": "get"
+    "method": "GET"
   }
 }
