@@ -1,5 +1,8 @@
 {
   "status": 200,
+  "header": {
+    "content-type": "application/json"
+  },
   "text": {
     "attributeOne": "yeah, this is good",
     "attributeTwo": "this should be an object"
