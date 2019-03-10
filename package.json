@@ -1,6 +1,6 @@
 {
   "name": "chai-swag",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "validate chai-http response against a parsed swagger",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -33,9 +33,9 @@
   },
   "homepage": "https://github.com/left-rite/chai-swag",
   "dependencies": {
-    "js-yaml": "3.12.1",
-    "json-cycle": "1.3.0",
-    "res-swag": "^0.1.11"
+    "js-yaml": "^3.12.1",
+    "json-cycle": "^1.3.0",
+    "res-swag": "^0.1.14"
   },
   "devDependencies": {
     "@types/chai": "4.1.7",
